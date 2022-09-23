@@ -3,6 +3,6 @@ import hudson.model.*
 
 def version = readFile "${env.WORKSPACE}/version.txt"
    println "${version}"
-def readcounter = ${version}.split('\\.')
-readcounter[2]=Integer.parseInt(readcounter[2])+1
+def readcounter = version.split('\\.')
+readcounter[2]=(readcounter[2]).toInteger() +1
 def newversion=readcounter.join('.')

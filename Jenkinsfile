@@ -16,6 +16,7 @@ pipeline {
                         readcounter[2]=(readcounter[2]).toInteger() +1
                         def newversion=readcounter.join('.')
                         println "${newversion}"
+			writeFile(file: 'version.txt', text:newversion.toString())
         }}
 	}}
 }

@@ -39,9 +39,9 @@ pipeline {
           //    }
                
         stage('increment the release version'){
-    when {
-        env.BRANCH == 'master'
-    }
+ 		when {
+               	 expression { env.BRANCH_NAME == 'master' }
+            }
              steps {
                        script{
                             version = VersionNumber(versionNumberString: '1.0.${BUILDS_ALL_TIME}')

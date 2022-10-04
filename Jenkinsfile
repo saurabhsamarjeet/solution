@@ -44,7 +44,7 @@ pipeline {
             }
              steps {
                        script{
-                            version = VersionNumber(versionNumberString: '1.0.${BUILDS_ALL_TIME}')
+                            version = VersionNumber(versionNumberString: '2.0.${BUILDS_ALL_TIME}')
                             println "${version}"
 	}
 }}}

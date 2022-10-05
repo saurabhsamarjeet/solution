@@ -40,7 +40,7 @@ pipeline {
                
         stage('increment the release version'){
  		when {
-               	 expression { env.BRANCH_NAME == 'master' }
+               	 expression { env.BRANCH_NAME == 'feature' }
             }
              steps {
                        script{
